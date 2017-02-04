@@ -66,6 +66,15 @@ body {
 	font-weight: bold;
 }
 
+.hidden{
+	display: none;
+}
+
+.red-text{
+	color:red !important;
+}
+
+
 /* PAGE STRUCTURE */
 #page-container {
 	padding: 54px 14px 15px;
@@ -126,6 +135,7 @@ body {
 		border-radius: 3px;
 		margin-bottom: 1em;
 		box-sizing: border-box;
+		transition: 0.3s;
 	}
 		#tweet-controls {
 			text-align: right;
@@ -164,6 +174,7 @@ body {
 		color: #333;
 		margin: 10px 0;
 		padding-left: 42px;
+		word-wrap: break-word;
 	}
 
 	.tweet-actions {
@@ -258,5 +269,3 @@ body {
 				top: 0;
 				left: 0;
 			}
-
-
