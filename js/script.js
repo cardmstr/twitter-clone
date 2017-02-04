@@ -2,6 +2,8 @@ $(document).ready(function(){
   // $('#profile-summary').append('<p>Test Successful!<p>');
   $('#tweet-controls').addClass('hidden');
   $('.tweet-actions').addClass('hidden');
+  $('.stats').addClass('hidden');
+  $('.reply').addClass('hidden');
 
   var Tweet = function(fullName, userName, tweetText){
     this.fullName = fullName;
@@ -103,6 +105,20 @@ $(document).ready(function(){
     $(this).find('.tweet-actions').toggleClass('hidden');
   })
 
-  
+  //.stats and .reply should be hidden until .tweet has focus
+  $('.tweet').on('click',function(){
+    if($(this).find('.stats').hasClass('hidden')){
+      $(this).find('.stats').removeClass('hidden');
+      $(this).find('.reply').removeClass('hidden');
+    } else {
+      $(this).find('.stats').addClass('hidden');
+      $(this).find('.reply').addClass('hidden');
+    }
+
+  })
+
+
+
+
 
 })
